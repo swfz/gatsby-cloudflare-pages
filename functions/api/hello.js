@@ -9,5 +9,9 @@ export async function onRequest(context) {
     data, // arbitrary space for passing data between middlewares
   } = context;
 
+  console.log(request)
+  console.log(params)
+  console.log(request.headers.get('x-real-ip'))
+
   return new Response("Hello, world!");
 }
